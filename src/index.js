@@ -3,7 +3,6 @@ module.exports = function toReadable (number) {
     const arrDozens = ['zero', 'ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
     const numberInMassive = String(number).split('');
     let output;
-    console.log(numberInMassive);
     if (numberInMassive.length === 3 && number % 100 > 19 && number % 10 !== 0){
         output = `${arrZeroTwenty[numberInMassive[0]]} hundred ${arrDozens[numberInMassive[1]]} ${arrZeroTwenty[numberInMassive[2]]}`;
     } else if (numberInMassive.length === 3 && number % 100 > 19 && number % 10 === 0){
@@ -23,6 +22,3 @@ module.exports = function toReadable (number) {
     };
     return output;
 };
-
-
-console.log(module.exports(911));
